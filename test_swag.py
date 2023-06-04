@@ -46,12 +46,12 @@ def test_empty_user_password(page):
     assert page.inner_text("h3") == "Epic sadface: Username is required"
 
 
-'''def test_locked_out_user(page):
+def test_locked_out_user(page):
     page.goto("/")
     page.fill("#user-name", "locked_out_user")
-    page.fill("#password", "secret sauce")
+    page.fill("#password", "secret_sauce")
     page.click("#login-button")
-    assert page.inner_text("h3") == "Epic sadface: Sorry, this user has been locked out."'''
+    assert page.inner_text("h3") == "Epic sadface: Sorry, this user has been locked out."
 
 
 def test_sorting_button(page):
@@ -121,8 +121,10 @@ def test_select_all(page):
     page.click("#add-to-cart-sauce-labs-onesie")
     page.click("#add-to-cart-sauce-labs-fleece-jacket")
     page.click("#add-to-cart-sauce-labs-bike-light")
-  #  page.click("#add-to-cart-test.allthethings()-t-shirt-(red)")
+   # page.click("#add-to-cart-test.allthethings()-t-shirt-(red)")
     page.click("text= Sauce Labs Backpack")
+    page.click("#remove-sauce-labs-backpack")
+    page.click("#add-to-cart-sauce-labs-backpack")
     page.click("#back-to-products")
     page.click("#react-burger-menu-btn")
     page.click("#logout_sidebar_link")
